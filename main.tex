@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper,twoside,openright]{antonello2}
+\include{Preamble/packages}
+
+
+\title{My MSc thesis}
+\author{Michele Antonello}
+
+% Inclusione parziale di capitoli:
+%\includeonly{Chapters/reinsurance,Backmatter/technical}
+%\includeonly{Chapters/reinsurance,Chapters/numreins}
+%\includeonly{Chapters/valueit,Backmatter/technical}
+%\includeonly{Chapters/numreins,Backmatter/technical}
+%\includeonly{Chapters/investment}
+%\includeonly{Chapters/model,Backmatter/technical}
+%\includeonly{Frontmatter/abstract,Chapters/intro}
+
+% Comandi personalizzati
+\input{Preamble/newcommands}
+
+
+\begin{document}
+
+%\maketitle
+\includepdf[pages=-]{copertina}
+
+% FRONT MATTER
+\pagenumbering{roman}
+\pagestyle{fancy}
+\tableofcontents
+
+\include{Frontmatter/abstract}
+%\includepdf[]{leftblank}
+\newpage\null
+\thispagestyle{empty}
+\newpage
+
+% MAIN MATTER
+\pagenumbering{arabic}
+
+\include{Chapters/intro}
+
+\include{Chapters/model}
+
+\include{Chapters/valueit}
+
+\include{Chapters/reinsurance}
+
+\include{Chapters/numreins}
+
+\include{Chapters/investment}
+
+
+% BACK MATTER
+
+\appendix
+
+%\include{Backmatter/optimality}
+
+\include{Backmatter/technical}
+
+
+\bibliographystyle{plain}
+%\bibliographystyle{apalike}
+%\bibliographystyle{alpha}
+\bibliography{Bibliography/thesis}
+
+\end{document}

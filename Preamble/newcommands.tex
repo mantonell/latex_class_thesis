@@ -1,0 +1,79 @@
+\newcommand{\eqdef}{\stackrel{\textrm{def}}{=}}
+\newcommand{\1}{\mathbbm{1}}
+\newcommand{\pr}{\mathbb{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\wlo}{\underline{w}}
+\newcommand{\wup}{\overline{w}}
+\newcommand{\npart}[1]{ \left( #1 \right)^- }
+\newcommand{\nmaxpart}[1]
+	{ \max \left\{ 0, - \left( #1 \right) \right\} }
+\newcommand{\ppart}[1]{ \left( #1 \right)^+ }
+\newcommand{\pmaxpart}[1]
+	{ \max \left\{ 0, #1 \right\} }
+	\newcommand{\dd}[1]{\textrm{d}#1}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\csetAll}{\mathcal{U}_{\textrm{re}} \times
+					\mathcal{U}_{\textrm{inv}}}
+
+\newcommand{\csetRe}{\mathcal{U}_{\textrm{re}}}
+
+\newcommand{\csetInv}{\mathcal{U}_{\textrm{inv}}}	
+
+\newcommand{\Exp}[1]{\text{Exp}(#1)}				
+					
+% Solita funzione indicatrice
+\newcommand{\indS}{\1_{t + S \leq T}}	
+
+% Speranza con apici e pedici					
+\DeclareDocumentCommand \E 
+	{ O{} O{} m } {
+	\mathbb{E}^{#1}_{#2} 
+	\left[
+	#3
+	\right]
+}
+
+% Operatore T
+\DeclareDocumentCommand \T
+	{ m o } {
+	\IfNoValueTF{#2}
+		{ \mathcal{T}^{#1} }
+		{ \mathcal{T}^{#1} \left[ #2 \right] }
+}
+
+% Valore assoluto e norme
+\DeclareDocumentCommand \abs 
+	{ m } {
+	\left| #1 \right|
+}
+\DeclareDocumentCommand \norm
+	{ m O{} } {
+	\left|\left| #1 \right| \right|_{#2}	
+}
+
+% Operatore T
+\DeclareDocumentCommand \A
+	{ m m o } {
+	\IfNoValueTF{#3}
+		{ \mathbf{A}^{#1}_{#2} }
+		{ \mathbf{A}^{#1}_{#2} \left[ #3 \right] }
+}
+
+% Funzione Pi
+\DeclareDocumentCommand \fp
+	{ m m o } {
+	\IfNoValueTF{#3}
+		{ \Pi^{#1}_{#2} }
+		{ \Pi^{#1}_{#2} \left[ #3 \right] }
+}
+
+% funzioni a^{m,k}_1
+\DeclareDocumentCommand \aa
+	{ m m }{ a^{#1}_{#2} }
+	
+% bgrid
+%\newcommand{\bg}{b^{\textrm{grid}}}
+
+% value @ risk
+\newcommand{\VaR}{\textrm{VaR}}
+					
